@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFind</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="../static/js/authorization.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('login')">Вход</button>
+            <button class="tab-button active" onclick="showTab('register')">Регистрация</button>
+        </div>
+
+        <div id="login" class="form-container">
+            <h2>Вход</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Введите email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit" class="btn">Войти</button>
+            </form>
+        </div>
+
+        <div id="register" class="form-container active">
+            <h2>Регистрация</h2>
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="first-name">Имя:</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Введите имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Фамилия:</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Введите фамилию" required>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name">Отчество:</label>
+                    <input type="text" id="middle-name" name="middle_name" placeholder="Введите отчество" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Введите email" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Пароль:</label>
+                    <input type="password" id="new-password" name="new_password" placeholder="Введите пароль" required>
+                </div>
+                <div class="form-group role-selection">
+                    <div class="role-option">
+                        <label for="role-applicant">Соискатель</label>
+                        <input type="radio" id="role-applicant" name="role" value="applicant" checked onclick="updateRoleField('applicant')">
+                    </div>
+                    <div class="role-option">
+                        <label for="role-employer">Работодатель</label>
+                        <input type="radio" id="role-employer" name="role" value="employer" onclick="updateRoleField('employer')">
+                    </div>
+                </div>
+                <input type="hidden" id="selected-role" name="selected_role" value="applicant">
+                <button type="submit" class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

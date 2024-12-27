@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить вакансию</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/vac.css">
+    <script defer src="../static/js/auth.js"></script>
+    <script defer src="../static/js/addVac.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>JobFind</h1>
+        </div>
+        <nav class="navigation">
+            <ul id="nav-links">
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="add-job-form">
+            <h2>Добавить вакансию</h2>
+            <form>
+                <label for="job-title">Название вакансии:</label>
+                <input type="text" id="job-title" name="job-title" required>
+    
+                <label for="job-description">Описание вакансии:</label>
+                <textarea id="job-description" name="job-description" required></textarea>
+    
+                <label for="job-salary">Зарплата:</label>
+                <input type="text" id="job-salary" name="job-salary" required>
+
+                <label for="job-role">Позиция:</label>
+                <input type="text" id="job-role" name="job-role" required>
+ 
+                <label for="company">Компания:</label>
+                <input type="text" id="company" name="company" required>
+
+                <label for="job-grade">Грейд:</label>
+                <select id="job-grade" name="job-grade" required>
+                    <option value="Junior">Junior</option>
+                    <option value="Middle">Middle</option>
+                    <option value="Senior">Senior</option>
+                </select>
+
+                <label for="country">Страна:</label>
+                <input type="text" id="country" name="country" required>
+
+                <label for="region">Регион:</label>
+                <input type="text" id="region" name="region" required>
+
+                <label for="city">Город:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="published-date">Дата публикации:</label>
+                <input type="date" id="published-date" name="published-date" required>
+
+                <label for="currency">Валюта:</label>
+                <select id="currency" name="currency" required>
+                    <option value="руб">Рубль (RUB)</option>
+                    <option value="USD">Доллар (USD)</option>
+                    <option value="EUR">Евро (EUR)</option>
+                </select>
+
+                <label for="job-status">Статус:</label>
+                <select id="job-status" name="job-status" required>
+                    <option value="Активно">Активно</option>
+                    <option value="Неактивно">Неактивно</option>
+                </select>
+
+                <label for="email">mail:</label>
+                <input type="email" id="email" name="email" required placeholder="example@mail.com">
+
+                <label for="skills">Скилы (перечислить через запятую):</label>
+                <input type="text" id="skills" name="skills" placeholder="Java, Spring, SQL" required>
+    
+                <button type="submit">Добавить вакансию</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

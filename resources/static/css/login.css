@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.back-to-home {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    text-decoration: none;
+    font-size: 16px;
+    color: #2575fc;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #2575fc;
+    color: white;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.form-container {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form-container.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #2575fc;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #1c5bb2;
+}
+
+.role-selection {
+    display: flex;
+    justify-content: center; 
+    gap: 50px; 
+}
+
+.role-option {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.role-option label {
+    margin-bottom: 10px; 
+}
+
+.form-group.role-selection div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
